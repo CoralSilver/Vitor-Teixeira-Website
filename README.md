@@ -1,3 +1,3 @@
 Vitor-Teixeira-Website
 ======================
-Responsive Photography portfolio website built with bootstrap
+In-progress responsive photography portfolio website built with bootstrap
