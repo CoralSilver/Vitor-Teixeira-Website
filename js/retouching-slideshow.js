@@ -1,82 +1,42 @@
 $( document ).ready(function() {
 
-		$("#before1 img").on("click", function () {
-    if ($(this).src.match("_before")) {
-        $(this).src = "imgs/retouched/tattoo_after.jpg";
-        $(this).parent().find("p").html("After");
-    } else {
-        $(this).src = "imgs/retouched/tattoo_before.jpg";
-        $(this).parent().find("p").html("Before");
-    }
-});
+	$.preloadImages = function() {
+  for (var i = 0; i < arguments.length; i++) {
+    $("<img />").attr("src", arguments[i]);
+  }
+}
 
-		$("#before2 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/rings_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/rings_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
+$.preloadImages(["/retouched/fish_after.jpg", 
+				"/retouched/fish_after@2x.jpg",
+				"/retouched/landscape_after.jpg", 
+				"/retouched/landscape_after@2x.jpg",
+				"/retouched/pistol_after.jpg", 
+				"/retouched/pistol_after@2x.jpg",
+				"/retouched/rings_after.jpg", 
+				"/retouched/rings_after@2x.jpg",
+				"/retouched/sculpture_after.jpg",
+				"/retouched/sculpture_after@2x.jpg",
+				"/retouched/sushi_after.jpg",
+				"/retouched/sushi_after@2x.jpg",
+				"/retouched/tatoo_after.jpg",
+				"/retouched/tatoo_after@2x.jpg",
+				"/retouched/whiskey_after.jpg",
+				"/retouched/whiskey_after@2x.jpg"
+				]);
 
-		$("#before3 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/pistol_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/pistol_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
+	$(function(){
+	  $(".img-swap").on('click', function() {
+	    if ($(this).attr("class") == "img-swap") {
+	      this.src = this.src.replace("_before","_after");
+	      $(this).attr('alt','retouched photo');
+	      $(this).parent().find("span").html("After");
+	    } else {
+	      this.src = this.src.replace("_after","_before")
+	      $(this).attr('alt', 'unretouched photo');
+	      $(this).parent().find("span").html("Before");
+	    }
+	      $(this).toggleClass("on");
+	  });
+	});
 
-		$("#before4 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/whiskey_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/whiskey_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
-
-		$("#before5 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/sushi_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/sushi_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
-
-		$("#before6 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/sculpture_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/sculpture_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
-
-		$("#before7 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/landscape_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/landscape_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
-
-		$("#before8 img").on("click", function(){
-		    if ($(this).src.match("_before")) {
-		        $(this).src = "imgs/retouched/fish_after.jpg";
-		        $(this).parent().find("p").html("After");
-		    } else {
-		        $(this).src = "imgs/retouched/fish_before.jpg";
-		        $(this).parent().find("p").html("Before");
-		    }
-		});
 });
