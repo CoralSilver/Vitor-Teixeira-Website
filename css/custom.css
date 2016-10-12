@@ -11,7 +11,7 @@ p, nav {font-family: 'Cabin', sans-serif;}
 h1, h2 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
-} 
+}
 
 h5 { margin-bottom: 18px; }
 
@@ -25,20 +25,35 @@ h5 { margin-bottom: 18px; }
 .logo-image {
 	display: block;
 	background: url(../imgs/vpt-logo.png) no-repeat;
-    overflow: hidden;
-    margin: 0;
-    text-indent: 100%;
+  margin: 0;
+  text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-    background-size: 100% auto;
-    width: 100%;
-    height: 100%;
+  background-size: 100% auto;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-image-home {
+	background: url(../imgs/vitor-logo.svg) no-repeat;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.2), only screen and (min-device-pixel-ratio: 1.2) {
 	.logo-image {
 		background-image: url(../imgs/vpt-logo@2x.png);
 	}
+}
+
+.splash-image {
+	max-height: 785px;
+}
+
+.yellow-background {
+	background-color: #ffcf3d;
+}
+
+.panel-yellow .panel {
+	background-color: #ffcf3d;
 }
 
 .container-fluid:first-child {
@@ -114,8 +129,8 @@ nav {
 	border-radius: 0;
 }
 
-.panel, .panel-heading, 
-.panel-default>.panel-heading+.panel-collapse .panel-body, 
+.panel, .panel-heading,
+.panel-default>.panel-heading+.panel-collapse .panel-body,
 .panel-group .panel-heading+.panel-collapse .panel-body {
 	border: 0;
 	-webkit-box-shadow:none;
@@ -205,7 +220,7 @@ ul.accordion-menu {
 }
 
 /* Carousel */
- 
+
 .carousel {
 	margin-top: 40px;
 }
@@ -382,6 +397,10 @@ ul[role="alert"] {
 	padding-left: 2px;
 	text-align: left;
 	color: rgb(215, 37, 37);
+}
+
+.img-responsive {
+	max-width: 100%;
 }
 
 /* Copyright Text */
