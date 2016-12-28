@@ -48,12 +48,48 @@ h5 { margin-bottom: 18px; }
 	max-height: 785px;
 }
 
-.yellow-background {
+/* home page background color animation */
+.index-background {
+	animation: change-colors 14s linear alternate infinite;
 	background-color: #ffcf3d;
 }
 
-.panel-yellow .panel {
-	background-color: #ffcf3d;
+@keyframes change-colors {
+  0% {
+		background-color: #ffcf3d;
+  }
+	10% {
+		background-color: #ffcf3d;
+	}
+	40% {
+		background-color: #5ac6fe;
+	}
+  50% {
+		background-color: #5ac6fe;
+	}
+	90% {
+		background-color: #928aff;
+	}
+  100% {
+    background-color: #928aff;
+  }
+}
+
+/* Carousel animation */
+.splash-image {
+  animation: fade-in-out 7s infinite;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+		opacity: 1;
+	}
+  100% {
+    opacity: 0;
+  }
 }
 
 .container-fluid:first-child {
@@ -126,6 +162,7 @@ nav {
 }
 
 .panel-group .panel, .panel-heading {
+	background-color: transparent;
 	border-radius: 0;
 }
 
@@ -335,9 +372,6 @@ p.about-text {
 }
 
 /* Contact Section */
-/*section#contact {
-	padding-bottom: 30px;
-	}*/
 
 section h2 {
 	border-bottom: 2px solid #333;
@@ -412,21 +446,4 @@ ul[role="alert"] {
 
 #carousel-retouching-page .copyright {
 	margin-top: -35px;
-}
-
-/* Carousel animation */
-.splash-image {
-  animation: fade-in-out 6s infinite;
-}
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 0;
-  }
-  50% {
-		opacity: 1;
-	}
-  100% {
-    opacity: 0;
-  }
 }
