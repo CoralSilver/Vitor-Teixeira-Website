@@ -50,7 +50,7 @@ h5 { margin-bottom: 18px; }
 
 /* home page background color animation */
 .index-background {
-	animation: change-colors 14s linear alternate infinite;
+	animation: change-colors 16s linear alternate infinite;
 	background-color: #ffcf3d;
 }
 
