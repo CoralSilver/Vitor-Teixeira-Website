@@ -1,5 +1,5 @@
 .container-fluid {
-	padding: 10px 5% 20px;
+	padding: 10px 25px;
 }
 
 a { color: #333;}
@@ -16,9 +16,9 @@ h1, h2 {
 h5 { margin-bottom: 18px; }
 
 .logo {
-  height: 80px;
+  height: 70px;
   width: 100%;
-  max-width: 290px;
+  max-width: 255px;
   margin-top: 30px;
 }
 
@@ -134,9 +134,17 @@ nav {
 		padding-left: 0;
 	}
 
-	.row {
-		margin-right: 0;
-		margin-left: 0;
+}
+
+@media (min-width: 992px) {
+	.left-sidebar {
+		width: 20%;
+		float: left;
+	}
+
+	.right-section {
+		width: 80%;
+		float: right;
 	}
 }
 
@@ -272,8 +280,10 @@ ul.accordion-menu {
 	color: #333;
 }
 
-.carousel img {
+.right-section img {
 	border: 1px solid #eee;
+	max-width: 100%;
+	height: auto;
 }
 
 .carousel-caption {
@@ -446,4 +456,14 @@ ul[role="alert"] {
 
 #carousel-retouching-page .copyright {
 	margin-top: -35px;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1em;
+}
+
+.flex-container .item {
+	width: 50%;
 }
