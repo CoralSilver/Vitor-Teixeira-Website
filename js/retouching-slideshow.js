@@ -6,34 +6,28 @@ $( document ).ready(function() {
   }
 }
 
-$.preloadImages(["/retouched/fish_after.jpg", 
-				"/retouched/fish_after@2x.jpg",
-				"/retouched/landscape_after.jpg", 
-				"/retouched/landscape_after@2x.jpg",
-				"/retouched/pistol_after.jpg", 
-				"/retouched/pistol_after@2x.jpg",
-				"/retouched/rings_after.jpg", 
-				"/retouched/rings_after@2x.jpg",
-				"/retouched/sculpture_after.jpg",
-				"/retouched/sculpture_after@2x.jpg",
-				"/retouched/sushi_after.jpg",
-				"/retouched/sushi_after@2x.jpg",
-				"/retouched/tatoo_after.jpg",
-				"/retouched/tatoo_after@2x.jpg",
-				"/retouched/whiskey_after.jpg",
-				"/retouched/whiskey_after@2x.jpg"
+$.preloadImages([
+				"/retouched/pistol_before.jpg",
+				"/retouched/rings_before.jpg",
+				"/retouched/sculpture_before.jpg",
+				"/retouched/sushi_before.jpg",
+				"/retouched/tatoo_before.jpg",
+				"/retouched/whiskey_before.jpg",
+				"/retouched/watch-_.jpg",
+				"/retouched/nia_before.jpg",
+				"/retouched/Nike_before.jpg"
 				]);
 
 	$(function(){
-	  $(".img-swap").on('click', function() {
+	  $(".img-swap").on('mouseenter mouseleave click', function() {
 	    if ($(this).attr("class") == "img-swap") {
-	      this.src = this.src.replace("_before","_after");
-	      $(this).attr('alt','retouched photo');
-	      $(this).parent().find("span").html("After");
-	    } else {
-	      this.src = this.src.replace("_after","_before")
-	      $(this).attr('alt', 'unretouched photo');
+	      this.src = this.src.replace("_after","_before");
+	      $(this).attr('alt','unretouched photo');
 	      $(this).parent().find("span").html("Before");
+	    } else {
+	      this.src = this.src.replace("_before","_after")
+	      $(this).attr('alt', 'retouched photo');
+	      $(this).parent().find("span").html("After");
 	    }
 	      $(this).toggleClass("on");
 	  });
